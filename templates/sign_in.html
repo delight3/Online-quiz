@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ sitetitle }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <!--Font awesome cdn-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-6 mx-auto">
+            <div class='card card-body  bg-light mt-5'>
+                <h2 class="text-primary">Login</h2>
+                <p>Please fill in credentials to log in.</p>
+                <form action="/login" method='POST' id="frmLogin">
+
+
+                    <div class="form-group">
+                        <label for='email'>Email Address: <sup>*</sup></label>
+                        <input type='email' name="email" class='form-control form-control-lg'>
+                        <span class="invalid-feedback"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for='password'>Password: <sup>*</sup></label>
+                        <input type='password' name="password" class='form-control form-control-lg'>
+                        <span class="invalid-feedback"></span>
+                    </div>
+
+                    <div class="form-check mb-2 text-center">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="remeberme">
+                        <label class="form-check-label text-primary" for="exampleCheck1">Remember Me</label>
+                    </div>
+
+
+                    <div class="row">
+
+                        <div class='col'>
+
+                            <button type='submit' name='login' class='btn  btn-block color-set bg-primary' id="btnLogin">login
+                            </button>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div id="msg"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class='col'>
+
+                            <a href="forget_pass" class="btn  btn-block">Forget Passsword?</a>
+
+                        </div>
+
+
+                        <div class='col'>
+
+                            <a href="register" class="btn  btn-block">No account? Register</a>
+
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+</body>
+</html>

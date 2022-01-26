@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <!--Font awesome cdn-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+{#<h1>Quiz on Important Facts</h1>#}
+<div class="container">
+    <div class="contain">
+        <div class="quiz-container">
+            <div id="quiz"></div>
+        </div>
+        <button id="previous">Previous Question</button>
+        <button id="next">Next Question</button>
+        <button id="submit">Submit Quiz</button>
+        <div id="results"></div>
+    </div>
+</div>
+
+
+<script src="{{ url_for('static', filename="bootstrap/js/jquery.min.js") }}"></script>
+<script src="{{ url_for('static', filename="bootstrap/js/popper.min.js") }}"></script>
+<script src="{{ url_for('static', filename="bootstrap/js/bootstrap.min.js") }}"></script>
+<script src="{{ url_for('static', filename='js/exam.js') }}"></script>
+</body>
+</html>
